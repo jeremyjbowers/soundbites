@@ -14,7 +14,7 @@ db = client.apps
 menu_items = db.menu_items
 
 
-@app.route('/raw/')
+@app.route('/soundbites/raw/')
 def raw_find():
     from flask import request
     q = request.args.get('q', None)
