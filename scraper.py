@@ -28,7 +28,8 @@ menu_items = db.menu_items
 menu_items.create_index([
     ('date', DESCENDING),
     ('day', ASCENDING),
-    ('dietary_value', ASCENDING),
+    ('dietary_value.color', ASCENDING),
+    ('dietary_value.value', DESCENDING),
     ('category', ASCENDING),
     ('week', DESCENDING)
 ])
