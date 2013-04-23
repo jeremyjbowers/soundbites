@@ -23,6 +23,9 @@ The scraper should be run once per week on Monday morning. It should not be run 
 
 The application is a lightweight wrapper over MongoDB.
 
+* Queries look like this: [http://jeremybowers.com/soundbites/raw/?q={%22dietary_value.color%22:%22green%22}](http://jeremybowers.com/soundbites/raw/?q={%22dietary_value.color%22:%22green%22})
+* Anything passed as JSON in the q parameter is passed directly to a pymongo `.find()` function.
+
 ## Future application
 
 There's much planned for soundbites.

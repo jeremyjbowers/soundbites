@@ -112,3 +112,10 @@ def deploy(remote='origin'):
     require('settings', provided_by=[production])
 
     checkout_latest(remote)
+
+"""
+Maintenance
+"""
+def run_scraper():
+    require('settings', provided_by=[production])
+    run('workon soundbites && cd %(repo_path)s && ./scraper.py' % env)
