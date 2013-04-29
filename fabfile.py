@@ -119,3 +119,7 @@ Maintenance
 def run_scraper():
     require('settings', provided_by=[production])
     run('workon soundbites && cd %(repo_path)s && ./scraper.py' % env)
+
+def reload_app():
+    require('settings', provided_by=[production])
+    run('touch %(repo_path)s/app.py' % env)
