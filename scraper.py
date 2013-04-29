@@ -103,11 +103,10 @@ for day, day_date in DAYS:
             # Set the category positionally.
             # I hope they don't have more than one thing
             # in the same category.
-            item_dict['category'] = CATEGORIES[index]
             index += 1
 
             unique_dict = {}
             unique_dict['date'] = item_dict['date']
-            unique_dict['category'] = item_dict['category']
+            unique_dict['description'] = item_dict['description']
 
             menu_items.update(unique_dict, item_dict, upsert=True, multi=False)
